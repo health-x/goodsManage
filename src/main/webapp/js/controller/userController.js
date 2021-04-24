@@ -1,0 +1,11 @@
+ //控制层 
+app.controller('userController',function($scope,userService){
+	//保存 
+	$scope.save=function(){
+		userService.add($scope.entity).success(
+			function(response){
+				alert(response.message)
+			}		
+		)
+	}
+});	
